@@ -245,7 +245,7 @@ def calculate():
 
 # = = = = = = = = = =   T K - I N T E R   = = = = = = = = = =
 root = tk.Tk()
-root.title("Bedingte Wahrscheinlichkeiten - Baumdiagramm")
+root.title("Probability Tree Calculator")
 root.geometry("1500x600")
 
 
@@ -276,14 +276,14 @@ event_b_name = tk.StringVar(value="B")
 event_not_b_name = tk.StringVar(value="B'")
 
 # - - - -   E V E N T   A   - - - -
-event_a_label = tk.Label(left_frame, text="Ereignis A:")
+event_a_label = tk.Label(left_frame, text="Event A:")
 event_a_label.pack()
 
 event_a_input = tk.Entry(left_frame, textvariable=event_a_name)
 event_a_input.bind("<KeyRelease>", lambda e: on_update())
 event_a_input.pack()
 
-event_not_a_label = tk.Label(left_frame, text="Gegenereignis A:")
+event_not_a_label = tk.Label(left_frame, text="Complement A:")
 event_not_a_label.pack()
 
 event_not_a_input = tk.Entry(left_frame, textvariable=event_not_a_name)
@@ -291,14 +291,14 @@ event_not_a_input.bind("<KeyRelease>", lambda e: on_update())
 event_not_a_input.pack()
 
 # - - - -   E V E N T   B   - - - -
-event_b_label = tk.Label(left_frame, text="Ereignis B:")
+event_b_label = tk.Label(left_frame, text="Event B:")
 event_b_label.pack()
 
 event_b_input = tk.Entry(left_frame, textvariable=event_b_name)
 event_b_input.bind("<KeyRelease>", lambda e: on_update())
 event_b_input.pack()
 
-event_not_b_label = tk.Label(left_frame, text="Gegenereignis B:")
+event_not_b_label = tk.Label(left_frame, text="Complement B:")
 event_not_b_label.pack()
 
 event_not_b_input = tk.Entry(left_frame, textvariable=event_not_b_name)
@@ -306,10 +306,10 @@ event_not_b_input.bind("<KeyRelease>", lambda e: on_update())
 event_not_b_input.pack()
 
 # - - - -   A C T I O N S   - - - -
-calculate_button = tk.Button(left_frame, text="Berechnen", command=calculate)
+calculate_button = tk.Button(left_frame, text="Calculate", command=calculate)
 calculate_button.pack(pady=20)
 
-reset_button = tk.Button(left_frame, text="Zurücksetzen", command=clear_values)
+reset_button = tk.Button(left_frame, text="Reset", command=clear_values)
 reset_button.pack()
 
 
